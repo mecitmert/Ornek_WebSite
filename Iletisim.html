@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iletisim</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function kontrol() {
+        var form = document.forms["form1"];
+        var deger = form[("fullname", "email", "tel", "massege")].value;
+
+        if (deger == "") {
+          alert("Bos Alan Birakalamaz !!");
+          return false;
+        } else {
+          alert("Iletinizi Basariyla Alindi");
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <hr />
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <h2>
+            <a href="#" class="logo">Mecit Mert Bisgin</a>
+          </h2>
+        </div>
+        <ul class="nav_links">
+          <a href="Anasayfa.html">Anasayfa</a>
+          <a href="Hakkimda.html">Hakkimda</a>
+          <a href="Iletisim.html">Iletisim</a>
+        </ul>
+      </div>
+    </header>
+    <section id="iletisim">
+      <div class="section_title_h2">
+        <h2>Iletisime Gec</h2>
+      </div>
+      <div class="inner_iletisim">
+        <div class="child_iletisim">
+          <img src="img/mesaj.png" alt="" />
+        </div>
+        <div class="child_iletisim">
+          <form
+            name="form1"
+            action="#"
+            method="POST"
+            onsubmit="return kontrol()"
+          >
+            <input placeholder="Isim" type="text" name="fullname" id="" />
+            <input placeholder="Email" type="text" name="email" id="" />
+            <input placeholder="Telefon" type="text" name="tel" id="" />
+            <textarea
+              placeholder="Mesaj"
+              name="massege"
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+            <input type="submit" value="Gonder" />
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
